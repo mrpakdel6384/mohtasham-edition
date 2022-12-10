@@ -38,15 +38,14 @@ class HomeController extends Controller
         ->setTitle('صفحه اصلی')
         ->setDescription('طراحی سایت آرون - ارائه دهنده راهکارهای مبتنی بروب :طراحی سایت, طراحی طراحی فروشگاه اینترنتی, سئو, طراحی اپلیکیشن');
 
-        $sliders = Slider::all();
         $ourServices = CategoryService::take(3)->get();
         $gallery = Gallery::where('id' , 1)->first();
-        $portfolios = Portfolio::latest()->take(4)->get();
-        $testimonials = Testimonial::latest()->take(3)->get();
+        $portfolios = Portfolio::latest()->take(6)->get();
         $categoryPortfolios = CategoryPortfolio::latest()->get();
         $posts = Content::latest()->where('status',"1")->take(4)->get();
+		$about = Content::where('id',48)->first();
        
-        return view('front.templates.aronv1.home.index', compact('sliders', 'ourServices','gallery','portfolios','testimonials','posts','categoryPortfolios'));
+        return view('front.templates.mohtasham.home.index', compact( 'ourServices','gallery','portfolios','posts','categoryPortfolios','about'));
     }
 
     public function comment(Request $request)
@@ -104,7 +103,7 @@ class HomeController extends Controller
             ->setTitle('تخمین قیمت طراحی سایت')
             ->setDescription('تخمین آنلاین قیمت طراحی وب سایت های فروشگاهی و اختصاصی ');
         $modules = Module::where('category_module_id',2)->get();
-        return view('front.templates.aronv1.home.price',compact('modules'));
+        return view('front.templates.mohtasham.home.price',compact('modules'));
     }
 
     public function getpricerequest(Request $request)

@@ -26,7 +26,7 @@ class CategoryPortfolio extends Model
         // TODO: Implement sluggable() method.
         return [
             'slug'=>[
-                'source'=>'title',
+                'source'=>'name',
             ]
         ];
     }
@@ -35,4 +35,11 @@ class CategoryPortfolio extends Model
     {
         return 'slug';
     }
+
+	public function thumbImage($size)
+	{
+		$image = explode('/', $this->image);
+		$image[5] =  $size."_".$image[5];
+		return $image = implode('/',$image);
+	}
 }

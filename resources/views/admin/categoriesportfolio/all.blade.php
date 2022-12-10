@@ -47,7 +47,7 @@
                                 <td>{{$category->portfolios->count()}}</td>
                                 <td class="d-flex">
                                     @can('delete-category-portfolio')
-                                        <form action="{{ route('admin.categoriesportfolio.destroy' , ['categoriesportfolio' => $category->id]) }}" method="POST">
+                                        <form action="{{ route('admin.categoriesportfolio.destroy' , ['categoriesportfolio' => $category]) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger ml-1">حذف</button>

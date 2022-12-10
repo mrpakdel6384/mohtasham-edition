@@ -27,7 +27,7 @@ class ContentController extends Controller
 
         $contents = $category->contents()->where('status','1')->latest()->paginate(10);
         $relatedPosts = $category->contents()->where('status','1')->latest()->take(10)->get();
-        return view('front.templates.aronv1.contents.blog' ,compact('category','contents','relatedPosts'));
+        return view('front.templates.mohtasham.contents.blog' ,compact('category','contents','relatedPosts'));
     }
 
 
@@ -47,7 +47,7 @@ class ContentController extends Controller
 
         $contents = Content::where('status','1')->latest()->paginate(10);
         $relatedPosts = Content::where('status','1')->latest()->take(10)->get();
-        return view('front.templates.aronv1.contents.all' ,compact('contents','relatedPosts'));
+        return view('front.templates.mohtasham.contents.all' ,compact('contents','relatedPosts'));
     }
 
     public function show(Category $category,Content $content)
@@ -72,6 +72,6 @@ class ContentController extends Controller
         $prev_post = Content::where('id','<',$content->id)->where('status','1')->first();
         $relatedPosts = $category->contents()->latest()->where('status','1')->take(6)->get()->except($content->id);
         $comments = $content->comments()->where('approved' , 1)->where('parent_id',0)->latest()->get();
-        return view('front.templates.aronv1.contents.single-content' ,compact('category','content','relatedPosts','next_post','prev_post','comments'));
+        return view('front.templates.mohtasham.contents.single-content' ,compact('category','content','relatedPosts','next_post','prev_post','comments'));
     }
 }

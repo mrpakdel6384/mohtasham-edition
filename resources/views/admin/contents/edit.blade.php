@@ -58,6 +58,8 @@
                             </select>
 
                         </div>
+                        <input name="status" value="1" {{$content->status ? "checked" : "" }} type="radio"> انتشار
+                        <input name="status" value="0" {{$content->status == 0 ? "checked" : "" }} type="radio"> پیش نویس
 
 
                     </div>

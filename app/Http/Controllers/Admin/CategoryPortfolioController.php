@@ -48,7 +48,6 @@ class CategoryPortfolioController extends Controller
             'name' => 'required|min:3',
             'description' => 'required',
         ]);
-
         CategoryPortfolio::create([
             'name' => $request->name,
             'description' => $request->description,
