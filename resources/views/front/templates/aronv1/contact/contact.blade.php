@@ -35,7 +35,7 @@
                   <div class="row">
                     <div class="col-md-6 mb-3 pb-1">
                       <label class="form-label" for="cont-fn">نام<sup class="text-danger ms-1">*</sup></label>
-                      <input class="form-control @error('name') is-invalid @enderror" type="text" id="cont-fn" name="name" rvalue="{{ old('name') }}" >
+                      <input class="form-control @error('name') is-invalid @enderror" type="text" id="cont-fn" name="name" value="{{ old('name') }}" >
                       @error('name')
                         <div class="invalid-feedback">{{$message}}</div>
                     @enderror

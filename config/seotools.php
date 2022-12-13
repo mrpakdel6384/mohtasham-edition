@@ -9,8 +9,8 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => 'طراحی سایت آرون', // set false to total remove
-            'titleBefore'  => 'طراحی سایت آرون', // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
+            'title'        => 'Professor Hesham Mohtasham Professor official website', // set false to total remove
+            'titleBefore'  => 'Professor Hesham Mohtasham Professor official website', // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description'  => false, // set false to total remove
             'separator'    => ' - ',
             'keywords'     => [],
@@ -36,8 +36,8 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'طراحی سایت آرون', // set false to total remove
-            'description' => 'طراحی سایت و اپلیکیشن آرون', // set false to total remove
+            'title'       => 'Professor Hesham Mohtasham Professor official website', // set false to total remove
+            'description' => 'Professor Hesham Mohtasham Professor official website', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'site_name'   => false,
@@ -58,8 +58,8 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'       => 'طراحی سایت آرون', // set false to total remove
-            'description' => 'طراحی سایت و اپلیکیشن آرون', // set false to total remove
+            'title'       => 'Professor Hesham Mohtasham Professor official website', // set false to total remove
+            'description' => 'Professor Hesham Mohtasham Professor official website', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',
             'images'      => [],

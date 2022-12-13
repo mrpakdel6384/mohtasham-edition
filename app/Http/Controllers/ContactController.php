@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Contact;
+use App\Content;
+use App\Portfolio;
 use App\Rules\Recaptcha;
 use Illuminate\Http\Request;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
@@ -19,10 +22,18 @@ class ContactController extends Controller
     public function index()
     {
 
-        $this->seo()->setTitle('تماس با ما');
-        $this->seo()->setDescription('طراحی سایت آرون - ارائه دهنده راهکارهای مبتنی بروب :طراحی سایت, طراحی طراحی فروشگاه اینترنتی, سئو, طراحی اپلیکیشن ');
-        $this->seo()->twitter()->setSite('طراحی سایت آرون');
-        return view('front.templates.aronv1.contact.contact');
+        $this->seo()->setTitle('Contact Us');
+        $this->seo()->setDescription('Professor Dr. Hesam Mohtasham
+has postdoctrate degree in Archaeology and PhD of Restoration of Historical Monuments  ');
+        $this->seo()->twitter()->setSite('Hesam Mohtasham official web site | Contact');
+
+
+	    $portfolios = Portfolio::latest()->take(6)->get();
+	    $news = Category::where('slug','blog')->first()->contents()->where('status',1)->get();
+	    $skills = Content::whereIn('id',[51,52,53])->get();
+	    $about = Content::where('slug','About-Us')->first();
+
+        return view('front.templates.mohtasham.contacts.contact', compact( 'portfolios','news','about','skills'));
     }
 
     /**

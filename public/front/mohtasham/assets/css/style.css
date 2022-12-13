@@ -35,7 +35,7 @@ This files table contents are outlined below>>>>>
 /*================================================
 Default CSS
 =================================================*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+/*@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");*/
 body {
   padding: 0;
   margin: 0;
@@ -6956,6 +6956,21 @@ Copyright Wrap Area CSS
 
 .background-with-black-color .contact-wrap-area.with-bg-color {
   background-color: #0e0e0e;
+}
+.comment-reply-link{
+  border: 1px solid #2b2b2b;
+  background-color:#000;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+textarea.comment{
+  min-height:200px;
+  height:200px !important;
 }
 
 /*End "Home Demo - 3", "Home Demo - 4" & "Home Demo - 5" Demo CSS*/

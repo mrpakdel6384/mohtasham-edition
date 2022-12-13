@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="zxx">
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap Min CSS -->
     <link rel="stylesheet" href="{{asset('front/mohtasham/assets/css/bootstrap.min.css')}}">
     <!-- Animate Min CSS -->
@@ -53,14 +54,14 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6">
-                <p><i class="far fa-copyright"></i> EnvyTheme. All Rights Reserved, <script>document.write(new Date().getFullYear())</script></p>
+                <p><i class="far fa-copyright"></i> <a href="https://aron-soft.com" target="_blank">Aron Soft</a>. All Rights Reserved, <script>document.write(new Date().getFullYear())</script></p>
             </div>
 
             <div class="col-lg-6 col-md-6">
-                <ul>
+                {{--<ul>
                     <li><a href="#">Terms & Conditions</a></li>
                     <li><a href="#">Privacy Policy</a></li>
-                </ul>
+                </ul>--}}
             </div>
         </div>
     </div>

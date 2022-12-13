@@ -8,12 +8,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#client">Client</a></li>
-                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact</a></li>
             </ul>
         </div>

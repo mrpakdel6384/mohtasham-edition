@@ -32,20 +32,18 @@ class HomeController extends Controller
     {
 
         $this->seo()
-        ->setTitle('صفحه اصلی')
-        ->setDescription('طراحی سایت آرون - ارائه دهنده راهکارهای مبتنی بروب :طراحی سایت, طراحی طراحی فروشگاه اینترنتی, سئو, طراحی اپلیکیشن')
+        ->setTitle('Home page ')
+        ->setDescription('Professor Hesham Mohtasham Professor official website')
         ->opengraph()
-        ->setTitle('صفحه اصلی')
-        ->setDescription('طراحی سایت آرون - ارائه دهنده راهکارهای مبتنی بروب :طراحی سایت, طراحی طراحی فروشگاه اینترنتی, سئو, طراحی اپلیکیشن');
+        ->setTitle('Home page')
+        ->setDescription('Professor Hesham Mohtasham Professor official website');
 
-        $ourServices = CategoryService::take(3)->get();
-        $gallery = Gallery::where('id' , 1)->first();
         $portfolios = Portfolio::latest()->take(6)->get();
-        $categoryPortfolios = CategoryPortfolio::latest()->get();
-        $posts = Content::latest()->where('status',"1")->take(4)->get();
-		$about = Content::where('id',48)->first();
+		$news = Category::where('slug','blog')->first()->contents()->where('status',1)->get();
+		$skills = Content::whereIn('id',[51,52,53])->get();
+		$about = Content::where('slug','About-Us')->first();
        
-        return view('front.templates.mohtasham.home.index', compact( 'ourServices','gallery','portfolios','posts','categoryPortfolios','about'));
+        return view('front.templates.mohtasham.home.index', compact( 'portfolios','news','about','skills'));
     }
 
     public function comment(Request $request)
